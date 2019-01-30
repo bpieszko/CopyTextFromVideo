@@ -1,7 +1,7 @@
 # CopyTextFromVideo
 
 ## Description
-Script to copy text from video file or camera. It is based on Tesseract OCR and OpenCV libraries.
+Mutlithreaded script to copy text from video file or camera. It is based on Tesseract OCR and OpenCV libraries.
 
 ## Dependencies
 ```
