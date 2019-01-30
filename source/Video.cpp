@@ -7,7 +7,7 @@ Video::Video(const std::string & file_path)
         throw VideoException("File path " + file_path + " is incorrect.");
 }
 
-std::vector<std::string> & Video::getText()
+std::vector<std::string> Video::getText()
 {
     cv::Mat frame;
     std::string frame_text;

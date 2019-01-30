@@ -13,7 +13,7 @@ class Video
 public:
     Video(const std::string & file_path);
 
-    std::vector<std::string>& getText();
+    std::vector<std::string> getText();
 
 private:
     cv::VideoCapture m_video;
