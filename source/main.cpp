@@ -8,20 +8,12 @@
 int main (int argc, char ** argv)
 {
     std::unique_ptr<CMDParser> args;
+    std::unique_ptr<Video> video;
+    
     try
     {
         args = std::unique_ptr<CMDParser>(new CMDParser(argc, argv));
-    }
-    catch (CMDParserException & e)
-    {
-        std::cout << e.what() << std::endl;
-        return 1;
-    }
-
-    std::unique_ptr<Video> video;
-    try
-    {
-        video = std::unique_ptr<Video>(new Video(args->at("FILE PATH")));
+        video = std::unique_ptr<Video>(new Video(args->at("-v")));
     }
     catch (Exception & e)
     {

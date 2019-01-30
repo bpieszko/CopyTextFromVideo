@@ -2,6 +2,7 @@
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 #include <string>
 #include <vector>
 #include "Exception.hpp"
@@ -23,11 +24,4 @@ private:
     static const size_t CAPTURE_PER_FRAME = 100;
     static const size_t SIMILARITY_PERCENT = 90;
     static const constexpr char * LANGUAGE = "eng";
-};
-
-class VideoException : public Exception
-{
-public:
-    VideoException(const std::string & message);
-private:
 };

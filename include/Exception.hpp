@@ -1,13 +1,14 @@
 #pragma once
 
 #include <exception>
+#include <string>
 
-class Exception : public std::exception
+class Exception
 {
 public:
-    Exception(const char * message);
-    const char * what() const noexcept;
+    Exception(const std::string & message);
+    const std::string& what() const noexcept;
 
 protected:
-    const char * m_message;
+    const std::string m_message;
 };

@@ -1,12 +1,12 @@
 #include "Exception.hpp"
 
-Exception::Exception(const char * message)
+Exception::Exception(const std::string & message)
     : m_message(message)
 {
-
+    
 }
 
-const char * Exception::what() const noexcept
+const std::string& Exception::what() const noexcept
 {
     return m_message;
 }

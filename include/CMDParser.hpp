@@ -21,9 +21,3 @@ private:
     std::map<std::string, std::string> m_args;
     const std::vector<std::string> m_keys;
 };
-
-class CMDParserException : public Exception
-{
-public:
-    CMDParserException(const std::string &);
-};
