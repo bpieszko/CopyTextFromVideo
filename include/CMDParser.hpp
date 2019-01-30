@@ -10,7 +10,7 @@ class CMDParser
 {
 public:
     CMDParser(const int argc, char ** argv);
-    std::string at(const std::string & key);
+    std::string& at(const std::string & key);
 
 private:
     std::pair<std::string, std::string> getKeyValue(const int i, char ** argv) const;
@@ -22,8 +22,8 @@ private:
     const std::vector<std::string> m_keys;
 };
 
-class CMDException : public Exception
+class CMDParserException : public Exception
 {
 public:
-    CMDException(const std::string &);
+    CMDParserException(const std::string &);
 };
