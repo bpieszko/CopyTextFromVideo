@@ -13,16 +13,12 @@ std::vector<std::string> Video::getText()
     std::string frame_text;
     std::vector<std::string> result_text;
 
-    cv::namedWindow("Window", cv::WINDOW_AUTOSIZE);
-
     for (int frame_cnt = 0; m_video.isOpened(); ++frame_cnt)
     {
         m_video >> frame;
 
         if (frame.empty())
             break;
-
-        imshow("Window", frame);
 
         if (frame_cnt % CAPTURE_PER_FRAME == 0)
         {
