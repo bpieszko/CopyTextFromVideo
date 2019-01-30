@@ -3,6 +3,7 @@ project(CopyTextFromVideo)
 
 find_package(OpenCV REQUIRED)
 set(Tesseract_LIBS tesseract)
+find_package(Threads)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,4 +14,4 @@ include_directories(include)
 file(GLOB SOURCES source/*.cpp)
 
 add_executable(CopyTextFromVideo ${SOURCES})
-target_link_libraries(CopyTextFromVideo ${OpenCV_LIBS} ${Tesseract_LIBS})
+target_link_libraries(CopyTextFromVideo ${OpenCV_LIBS} ${Tesseract_LIBS} ${CMAKE_THREAD_LIBS_INIT})

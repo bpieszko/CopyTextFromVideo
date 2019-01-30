@@ -25,7 +25,7 @@ int main (int argc, char ** argv)
     auto video_text = video->getText();
 
     for (auto i : video_text)
-        std::cout << i << std::endl;
+        std::cout << i;
 
     return 0;
 }

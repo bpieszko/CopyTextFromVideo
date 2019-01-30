@@ -4,6 +4,8 @@
 #include <opencv2/core/core.hpp>
 #include <string>
 #include <vector>
+#include <thread>
+#include <mutex>
 #include "Exception.hpp"
 #include "OCR.hpp"
 #include "LCS.hpp"
@@ -20,9 +22,15 @@ public:
     std::vector<std::string> getText();
 
 private:
+    void getTextThread(const size_t start, const size_t end, const size_t id);
+    std::string getLastCapturedText(const size_t id);
+
     cv::VideoCapture m_video;
-    OCR m_api;
-    std::vector<std::string> m_text;
+    std::vector<std::vector<std::string>> m_text;
+    std::mutex m_text_mutex;
+
+    std::vector<std::thread> m_threads;
+    std::vector<cv::Mat> m_frames;
 
     static const size_t CAPTURE_PER_FRAME = 100;
     static const size_t SIMILARITY_PERCENT = 90;
