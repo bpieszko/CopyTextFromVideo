@@ -7,9 +7,10 @@
 
 int main (int argc, char ** argv)
 {
+    std::unique_ptr<CMDParser> args;
     try
     {
-        CMDParser args(argc, argv);
+        args = std::unique_ptr<CMDParser>(new CMDParser(argc, argv));
     }
     catch (CMDParserException & e)
     {
@@ -17,11 +18,10 @@ int main (int argc, char ** argv)
         return 1;
     }
 
-    auto ocr = OCR::initialize("eng");
-
+    std::unique_ptr<Video> video;
     try
     {
-        Video video(cv::VideoCapture(args.at("FILE PATH")), ocr);
+        video = std::unique_ptr<Video>(new Video(args->at("FILE PATH")));
     }
     catch (Exception & e)
     {
@@ -29,7 +29,7 @@ int main (int argc, char ** argv)
         return 1;
     }
 
-    auto video_text = video.getText();
+    auto video_text = video->getText();
 
     for (auto i : video_text)
         std::cout << i << std::endl;
