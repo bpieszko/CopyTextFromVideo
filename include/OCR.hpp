@@ -5,6 +5,10 @@
 #include <memory>
 #include <opencv2/core/mat.hpp>
 
+/*
+ * @Brief:
+ *      Class implementing optical character recognition.
+ */
 class OCR
 {
 public:

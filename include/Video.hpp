@@ -8,6 +8,10 @@
 #include "OCR.hpp"
 #include "LCS.hpp"
 
+/*
+ * @Brief:
+ *      Class responsible for capture text from video.
+ */
 class Video
 {
 public:

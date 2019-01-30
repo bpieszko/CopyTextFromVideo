@@ -6,6 +6,10 @@
 #include <algorithm>
 #include "Exception.hpp"
 
+/*
+ * @Brief:
+ *      Class to parsing arguments from command line.
+ */
 class CMDParser
 {
 public:

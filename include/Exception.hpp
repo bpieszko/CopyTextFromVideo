@@ -3,6 +3,10 @@
 #include <exception>
 #include <string>
 
+/*
+ * @Brief:
+ *      Class responsible for exceptions.
+ */
 class Exception
 {
 public:

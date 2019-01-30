@@ -3,6 +3,13 @@
 #include <string>
 #include <vector>
 
+/*
+ * @Brief:
+ *      Class responsible for implementing
+ *      Longest Common Substring algorithm
+ *      to calculate similarity of two
+ *      strings expressed in percent value.
+ */
 class LCS 
 {
 public:

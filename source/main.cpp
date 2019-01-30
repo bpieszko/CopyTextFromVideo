@@ -1,9 +1,10 @@
-#include <opencv2/opencv.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
+/*
+ * Author: Bartosz Pieszko
+ * E-Mail: bartosz.pieszko@gmail.com
+ * Licence: MIT
+ */
 #include "Video.hpp"
 #include "CMDParser.hpp"
-#include "OCR.hpp"
 
 int main (int argc, char ** argv)
 {
