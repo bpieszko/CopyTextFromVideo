@@ -5,8 +5,9 @@ Mutlithreaded script to copy text from video file or camera. It is based on Tess
 
 ## Dependencies
 ```
-OpenCV
-Tesseract
+OpenCV 3.2.0
+Tesseract 4.00
+Leptonica 1.75
 C++ in version at least 14
 ```
 ## Building
