@@ -5,10 +5,9 @@ Mutlithreaded script to copy text from video file or camera. It is based on Tess
 
 ## Dependencies
 ```
-OpenCV 3.2.0
+OpenCV 4
 Tesseract 4.00
-Leptonica 1.75
-C++ in version at least 14
+C++ in version at least 17
 ```
 ## Building
 ```
@@ -21,12 +20,12 @@ make
 
 ## Using
 ```
-./CopyTextFromVideo -v [file path or 0 to capture from camera] 2> /dev/null
+./CopyTextFromVideo [file path or 0 to capture from camera] 2> /dev/null
 ```
 
 ## Example
 ```
-./CopyTextFromVideo -v video.mp4 2> /dev/null
+./CopyTextFromVideo video.mp4 2> /dev/null
 ```
 
 ## Author
@@ -38,7 +37,7 @@ bartosz.pieszko@gmail.com
 [![Video file not found](https://img.youtube.com/vi/x5QmQ27Md1E/0.jpg)](https://www.youtube.com/watch?v=x5QmQ27Md1E)
 ### Usage
 ```
-./CopyTextFromVideo -v file_from_youtube.mp4 2> /dev/null
+./CopyTextFromVideo file_from_youtube.mp4 2> /dev/null
 ```
 ### Output
 ```
