@@ -6,6 +6,7 @@
 
 namespace {
 
+// OCR works slow, but mostly text pieces are visible for more than second in video
 constexpr unsigned FRAMES_PER_SECOND_OPTIMIZATION{30};
 
 FrameTexts getTextInThread(std::shared_ptr<FrameProvider> frameProviderPtr,
